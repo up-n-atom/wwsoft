@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Requirements](#requirements)
+- [Wiki](#requirements)
 - [License](#license)
 
 ## Requirements
@@ -26,6 +27,8 @@
     - Packages exist for all of the above requirements.
 - TeraTerm `https://ttssh2.osdn.jp`
     - For the use of transmitting the soft-app over XMODEM, as well as the retrieval of the IPL via its binary logging functionality.
+
+## [Wiki](https://github.com/up-n-atom/wwsoft/wiki/IPL-Dumper)
 
 ## License
 
