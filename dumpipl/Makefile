@@ -3,6 +3,7 @@ NASMFLAGS:=-f bin
 PERL:=perl
 PERLFLAGS:=-e
 
+# Based from http://daifukkat.su/blog/archives/2014/07/14/wonderhax_part_2/
 WWENCODE = \
 	my ($$b, $$c) = (255, 0); \
 	binmode STDIN; \
