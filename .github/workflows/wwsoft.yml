@@ -1,0 +1,22 @@
+name: wwsoft
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install nasm
+      run: sudo apt-get --yes --force-yes install nasm
+
+    - name: Make dumpipl
+      run: |
+        cd dumpipl
+        make
