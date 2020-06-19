@@ -23,7 +23,7 @@
 > Optional but highly recommended.
 
 - MSYS2 `https://www.msys2.org`
-    - Packages exists for all of the above requirements.
+    - Packages exist for all of the above requirements.
 - TeraTerm `https://ttssh2.osdn.jp`
     - For the use of transmitting the soft-app over XMODEM, as well as the retrieval of the IPL via its binary logging functionality.
 
