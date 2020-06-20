@@ -25,7 +25,7 @@ Dumps the system IPL over serial by means of the Pocket Challenge V2 bootstrap t
 
 > Optional but highly recommended.
 
-- MSYS2 `https://www.msys2.org`
+- WSL1/2 *OR* MSYS2 `https://www.msys2.org`
     - Packages exist for all of the above requirements.
 - TeraTerm `https://ttssh2.osdn.jp`
     - For the use of transmitting the soft-app over XMODEM, as well as the retrieval of the IPL via its binary logging functionality.
