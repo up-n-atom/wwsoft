@@ -26,7 +26,7 @@ dumpipl : dumpipl.asm
 
 wwsoft: dumpipl
 	$(PERL) $(PERLFLAGS) '$(WWENCODE)' < $< > $@
-	rm -rf $<
+	@rm -rf $< ||:
 
 clean:
 	rm -rf wwsoft
