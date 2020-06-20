@@ -10,7 +10,7 @@ Dumps the system IPL over serial by means of the Pocket Challenge V2 bootstrap t
 
 ## Requirements
 
-### Platform-Independent
+### Cross-platform
 
 - Git `https://git-scm.com`
     - For use with the cloning of this repository
