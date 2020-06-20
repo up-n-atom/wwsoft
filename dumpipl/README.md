@@ -1,4 +1,6 @@
-# WonderWitch IPL Dumper
+# IPL Dumper
+
+Dumps the system IPL over serial by means of the Pocket Challenge V2 bootstrap to evade the IPL lockout.
 
 ## Table of Contents
 
