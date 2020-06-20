@@ -1,12 +1,13 @@
 ; A WonderWitch soft-app to dump the system IPL over serial by means of the
 ; Pocket Challenge V2 bootstrap
 
-%assign HEAD 16
-%assign SEGZ 64*1024
-
 bits 16
 
 cpu 186
+
+HDRZ equ 16
+SEGZ equ 64*1024
+BSEG equ 0x4000
 
 SYSTEM_CTRL3 equ 0x62
 SYSTEM_CTRL1 equ 0xa0
@@ -18,7 +19,7 @@ INT_NMI_CTRL equ 0xb7
 times (4*SEGZ)-($-$$) db 0xff
 
 ; Do as they do - Pocket Challenge V2
-times HEAD db 0x0
+times HDRZ db 0x0
 
 start:
 	cli
@@ -61,12 +62,10 @@ junkinthetrunk:
 	hlt
 
 ; Post-pad
-times ((3*SEGZ)-HEAD)-($-start+HEAD) db 0xff
+times ((3*SEGZ)-HDRZ)-($-start+HDRZ) db 0xff
 
 ; Header
-	db 0xea
-	dw start
-	dw 0x4000
+	jmp BSEG:start
 	db 0
 	db 0xff
 	db 1
