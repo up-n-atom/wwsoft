@@ -15,10 +15,8 @@ cpu 186
 	SERIAL_STATUS equ 0xb3
 	INT_NMI_CTRL equ 0xb7
 
-; Pre-pad
 times (4*SEGZ)-($-$$) db 0xff
 
-; Do as they do - Pocket Challenge V2
 times HDRZ db 0x0
 
 start:
@@ -61,10 +59,8 @@ start:
 	out SYSTEM_CTRL3, al
 	hlt
 
-; Post-pad
 times ((3*SEGZ)-HDRZ)-($-start+HDRZ) db 0xff
 
-					; Header
 	jmp BSEG:start
 	db 0
 	db 0xff
