@@ -7,7 +7,6 @@ cpu 186
 
 	HDRZ equ 16
 	SEGZ equ 64*1024
-	BSEG equ 0x4000
 
 	SYSTEM_CTRL3 equ 0x62
 	SYSTEM_CTRL1 equ 0xa0
@@ -61,7 +60,7 @@ start:
 
 times ((3*SEGZ)-HDRZ)-($-start+HDRZ) db 0xff
 
-	jmp BSEG:start
+	jmp 0x4000:start
 	db 0
 	db 0xff
 	db 1
