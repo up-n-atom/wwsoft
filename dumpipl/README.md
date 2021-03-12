@@ -30,7 +30,9 @@ Dumps the system IPL over serial by means of the Pocket Challenge V2 bootstrap t
 - TeraTerm `https://ttssh2.osdn.jp`
     - For the use of transmitting the soft-app over XMODEM, as well as the retrieval of the IPL via its binary logging functionality.
 
-## [Wiki](https://github.com/up-n-atom/wwsoft/wiki/IPL-Dumper)
+## Wiki
+
+Check out the [wiki](https://github.com/up-n-atom/wwsoft/wiki/IPL-Dumper) for hardware and software setup
 
 ## License
 
