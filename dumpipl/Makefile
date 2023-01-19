@@ -7,7 +7,7 @@ PERLFLAGS:=-e
 WWENCODE = \
 	binmode STDIN; \
 	$$/ = \1; \
-	while (<STDIN>) { \
+	while (<>) { \
 		print chr($$b = ($$. - 1) & 127 ? ord($$_) ^ $$b : ord($$_) ^ 255); \
 	}
 
