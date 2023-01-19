@@ -5,14 +5,10 @@ PERLFLAGS:=-e
 
 # Based from http://daifukkat.su/blog/archives/2014/07/14/wonderhax_part_2/
 WWENCODE = \
-	my ($$b, $$c) = (255, 0); \
 	binmode STDIN; \
 	$$/ = \1; \
 	while (<STDIN>) { \
-		print chr($$b ^= ord($$_)); \
-		if (!($$c = ($$c + 1) & 127)) { \
-			$$b=255; \
-		} \
+		print chr($$b = ($$. - 1) & 127 ? ord($$_) ^ $$b : ord($$_) ^ 255); \
 	}
 
 .PHONY: all clean
