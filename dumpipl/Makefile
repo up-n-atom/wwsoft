@@ -1,15 +1,12 @@
 NASM:=nasm
 NASMFLAGS:=-f bin
 PERL:=perl
-PERLFLAGS:=-e
+PERLFLAGS:=-ne
 
 # Based from http://daifukkat.su/blog/archives/2014/07/14/wonderhax_part_2/
 WWENCODE = \
-	binmode STDIN; \
-	$$/ = \1; \
-	while (<>) { \
-		print chr($$b = ($$. - 1) & 127 ? ord($$_) ^ $$b : ord($$_) ^ 255); \
-	}
+	BEGIN{$$/ = \1;} \
+	print chr($$b = ($$. - 1) & 127 ? ord($$_) ^ $$b : ord($$_) ^ 255);
 
 .PHONY: all clean
 
